@@ -23,7 +23,7 @@ def solve(outlet, device, N, L):
   return 'NOT POSSIBLE'
 """
 
-""" one oultet for one device, so the flip str can be found one pair one outlet and one device
+""" one oultet for one device, so the flip str can be found by choosing one outlet for one device
 """
 def solve(outlet, device, N, L):
 	ans = L + 1
