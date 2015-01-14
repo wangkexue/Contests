@@ -1,5 +1,6 @@
 import collections
 import functools
+from itertools import izip
 
 class memoized(object):
    '''Decorator. Caches a function's return value each time it is called.
@@ -39,7 +40,7 @@ def solve(n, tar, foods):
         return False
     #food_pcf = map(int, raw_input.strip().split())
     #p, c, f = map(int, raw_input().strip().split())
-    if any(x > y for x, y in zip(foods[n-1], tar)):
+    if any(x > y for x, y in izip(foods[n-1], tar)):
         #print [x - y for x, y in zip(foods[n-1], tar)]
         return solve(n - 1, tar, foods)
     return solve(n - 1, tuple(x - y for x, y in zip(tar, foods[n-1])), foods) or solve(n - 1, tar, foods)
