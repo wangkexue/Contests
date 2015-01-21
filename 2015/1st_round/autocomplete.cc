@@ -1,8 +1,8 @@
 #include <cstdio>
 #include <string>
 #include <iostream>
-#include <unordered_map>
-#include <vector>
+//#include <unordered_map>
+//#include <vector>
 using namespace std;
 
 struct TrieNode{
@@ -82,20 +82,18 @@ public:
 };
 
 int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int T, i;
-	scanf("%d", &T);
-	//ios.sync_with_stdio(false);
-	//cin.tie(0);
+	cin >> T;
 	long N;
 	int long j;
 	for (i = 1; i <= T; i++) {
-		scanf("%ld", &N);
+	        cin >> N;
 		string dummy;
-		getline(cin, dummy);
-
 		Trie dict;
-		for (j = 0; j < N; j++) {	
-			getline(cin, dummy);
+		for (j = 0; j < N; j++) {
+		        cin >> dummy;
 			//cout << word << endl;
 			dict.insertTrie(dummy);
 		}
