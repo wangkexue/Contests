@@ -1,0 +1,9 @@
+#http://bit.ly/1PpHZS0
+*
+
+!.gitignore
+!*.cc
+!*.py
+!README.md
+
+!*/
