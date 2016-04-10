@@ -3,6 +3,7 @@
 
 !.gitignore
 !*.cc
+!*.cpp
 !*.py
 !README.md
 
